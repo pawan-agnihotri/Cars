@@ -4,17 +4,15 @@ import numpy as np
 from ultralytics import YOLO
 import cvzone
 from vidgear.gears import CamGear
-from python_css.tracker import Tracker
+from tracker import Tracker
 tracker = Tracker()
 
 model=YOLO('yolov8m.pt')
 
-stream = CamGear(source='https://www.youtube.com/watch?v=Y1jTEyb3wiI', stream_mode = True, logging=True).start()
+#stream = CamGear(source='https://www.youtube.com/watch?v=Y1jTEyb3wiI', stream_mode = True, logging=True).start()
+stream = CamGear(source='https://www.youtube.com/watch?v=hIglzOpSK3E', stream_mode = True, logging=True).start()
 
-def RGB(event, x, y, flags, param):
-    if event == cv2.EVENT_MOUSEMOVE :
-        colorsBGR = [x, y]
-        print(colorsBGR)
+
 
 
 cv2.namedWindow('RGB')
