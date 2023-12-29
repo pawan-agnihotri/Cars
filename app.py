@@ -82,8 +82,8 @@ def index():
         cv2.destroyAllWindows()
 
         # Render the template with the processed text
-        return render_template('index.html', processed_text=processed_text)
-
+        #return render_template('index.html', processed_text=processed_text)
+        return render_template('index.html', processed_text=num_cars)
     # If the request method is GET, render the template without processing
     return render_template('index.html')
 
